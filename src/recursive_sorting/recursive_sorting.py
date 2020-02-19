@@ -7,7 +7,7 @@ def merge( arrA, arrB ):
     a = 0
     b = 0
 
-    while a < len(arrA) and b < len(arrB):
+    while a < len(arrA) or b < len(arrB):
         if b == len(arrB) or (a < len(arrA) and arrA[a] < arrB[b]):
             merged_arr[a+b] = arrA[a]
             a += 1
@@ -18,7 +18,7 @@ def merge( arrA, arrB ):
     
     return merged_arr
 
-print(merge([0,8,9],[3,5,7]))
+# print(merge([0,8,9],[3,5,7]))
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
@@ -34,7 +34,7 @@ def merge_sort( arr ):
     return arr
 # merge_sort([4,6,8])
 
-print(merge_sort([8,6,7,5,3,0,9]))
+# print(merge_sort([8,6,7,5,3,0,9]))
 
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
